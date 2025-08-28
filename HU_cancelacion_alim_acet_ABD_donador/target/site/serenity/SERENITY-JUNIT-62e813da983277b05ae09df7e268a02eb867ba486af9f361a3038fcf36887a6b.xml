@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Cancellation of portability when it was accepted by the donor and the ABD" skipped="1" tests="1" time="46.48" timestamp="2025-07-11 04:23:40"><testcase name="Create portability, accept it, cancel it, and verify state in SPM and database"><skipped/></testcase></testsuite>

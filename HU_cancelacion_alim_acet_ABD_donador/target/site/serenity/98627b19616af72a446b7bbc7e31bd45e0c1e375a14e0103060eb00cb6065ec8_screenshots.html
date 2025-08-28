@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c839cc0204656272ed733f18a80a76310cb517477cad39c3ae99ee1fa5a2d7cb.html">Cancellation Of Portability When It Was Accepted By The Donor And The ABD</a></span>
+                > <span class="truncate-60"><a
+                    href="98627b19616af72a446b7bbc7e31bd45e0c1e375a14e0103060eb00cb6065ec8.html">Create portability, accept it, cancel it, and verify state in SPM and database </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 11-07-2025 16:23</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Cancellation Of Portability When It Was Accepted By The Donor And The ABD </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="fbc531f8b0729be782fe8132aee591181a4bb0db37f772353419265e8427c0f4.html">Cancellation Flow
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-hourglass-top pending-icon fa-2x' title='PENDING'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="pending-color">Create portability, accept it, cancel it, and verify state in SPM and database
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When I send a portability request using the service "&lt;spn_alim_requestNip&gt;" with the cellphone "&lt;cellphone&gt;"<br>Then I should receive the response code for Nip "&lt;errorCode&gt;"<br>Given I am on the Numle login page<br>When the user enters valid credentials<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;test&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then I should see the NIP "&lt;NIP&gt;" and the cellphone "&lt;cellphone&gt;" displayed<br>And I log out<br>When I send a portability request using the service "&lt;spn_alim_requestPortability&gt;" with cellphone "&lt;cellphone&gt;", NIP "&lt;NIP&gt;", and date "&lt;date&gt;"<br>Then I should receive the response code "&lt;errorCode&gt;"<br>Given I am on the Numlex login page<br>When the user enters valid credentials for fake user<br><table class='embedded'><thead><th>username</th><th>password</th></thead><tbody><tr><td>&lt;fake&gt;</td><td>&lt;password&gt;</td></tr></tbody></table><br>Then I accept the portability request<br>And I log out<br>Given I am on the SPM login page<br>When I log in with username "&lt;spmUser&gt;" and password "&lt;spmPassword&gt;"<br>And I search for the cellphone "&lt;cellphone&gt;"<br>Then I should see the request state as "&lt;stateRequest&gt;"<br>Given I am connected to the SPM database<br>When I search for the request using the query "&lt;query&gt;"<br>Then I should see the requestId stored in the database<br>Given I am on the Numle login page<br>When I log in with username "&lt;fake&gt;" and password "&lt;password&gt;"<br>And I click the cancel button<br>And I complete the cancellation form<br>And I click the submit button<br>Then I should see the cellphone "&lt;cellphone&gt;" with status "&lt;StatusRequest&gt;"<br>And I log out<br>Given I am on the SPM login page<br>When I log in with username "&lt;spmUser&gt;" and password "&lt;spmPassword&gt;"<br>And I search for the cellphone "&lt;cellphone&gt;"<br>Then I should see the request state as "&lt;stateRequestCanceled&gt;"<br>Given I am connected to the SPM database<br>When I search for the request using the query "&lt;query&gt;"<br>Then the result should be empty</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="ae7dff164539e1e8d982f581e0e9a1d5e4e18c5884b1bd67511229a99a317a5b.png" title=" 1: Create portability, accept it, cancel it, and verify state in SPM and database ({spn_alim_requestNip=requestNipService, cellphone=3800003070, errorCode=success, test=test00004, password=TD3vD$9*dYN*, NIP=998877, date=2025-07-16T00:07:00, spn_alim_requestPortability=spn_alim_requestPortability, fake=fakeUser, spmUser=spm, spmPassword=12345, stateRequest=accepted by ABD and Donor, query=SELECT * FROM spm, StatusRequest=canceled, stateRequestCanceled=canceled by donor})" width="0"/>
+                <img src="ae7dff164539e1e8d982f581e0e9a1d5e4e18c5884b1bd67511229a99a317a5b.png" title=" Given I am on the Numle login page" width="0"/>
+                <img src="ae7dff164539e1e8d982f581e0e9a1d5e4e18c5884b1bd67511229a99a317a5b.png" title=" SoapUser opens the browser at https://10.187.66.114/login" width="0"/>
+                <img src="ae7dff164539e1e8d982f581e0e9a1d5e4e18c5884b1bd67511229a99a317a5b.png" title=" Soapuser no private page message task" width="0"/>
+                <img src="ae7dff164539e1e8d982f581e0e9a1d5e4e18c5884b1bd67511229a99a317a5b.png" title=" SoapUser clicks on click on button avanzado" width="0"/>
+                <img src="2bb85178d40b470e126f99a55ed17e6001493107f7f6e4290e62cb5810ff1a87.png" title=" SoapUser clicks on click on button avanzado (completed)" width="0"/>
+                <img src="2bb85178d40b470e126f99a55ed17e6001493107f7f6e4290e62cb5810ff1a87.png" title=" SoapUser clicks on click on button proceed link" width="0"/>
+                <img src="c1c90f480d76c8ae8b23b16871c1f4a51139b435b71233c4d0b54a55ee2a5cbd.png" title=" SoapUser clicks on click on button proceed link" width="0"/>
+                <img src="084fb32e8ef0a225c4e83041ea0c45206d19f1739d8cd443ca8b598957db1c7a.png" title=" SoapUser clicks on click on button proceed link (completed)" width="0"/>
+                <img src="084fb32e8ef0a225c4e83041ea0c45206d19f1739d8cd443ca8b598957db1c7a.png" title=" Soapuser no private page message task (completed)" width="0"/>
+                <img src="084fb32e8ef0a225c4e83041ea0c45206d19f1739d8cd443ca8b598957db1c7a.png" title=" Given I am on the Numle login page (completed)" width="0"/>
+                <img src="8560d44c07e79cde8c48748d215ec8f6bb2f0b7ede7c15aad2972509cb7a9d9a.png" title=" When the user enters valid credentials
+| username | password |
+| test00004 | TD3vD$9*dYN* |" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Soapuser login task" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" SoapUser enters 'test00004' into text input username" width="0"/>
+                <img src="d991096cae47702d52f4e33bb05933ef5569eacc642501d45a1f9a57a0113991.png" title=" SoapUser enters 'test00004' into text input username" width="0"/>
+                <img src="6ef8c9f06ba9f82225148d75ca06a952ac98afc17dd1805c5f4be75c692ef06a.png" title=" SoapUser enters 'test00004' into text input username (completed)" width="0"/>
+                <img src="6ef8c9f06ba9f82225148d75ca06a952ac98afc17dd1805c5f4be75c692ef06a.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password" width="0"/>
+                <img src="25682d08da11e1d191fa828268680f0c3df2d940fee01fcf1b9893d48797ea2e.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password" width="0"/>
+                <img src="c447e0c91b74f219abe0ac6c7fd53165600725d17744938f2aeec5f96d39f45d.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password (completed)" width="0"/>
+                <img src="c447e0c91b74f219abe0ac6c7fd53165600725d17744938f2aeec5f96d39f45d.png" title=" SoapUser clicks on click on button login" width="0"/>
+                <img src="5fbc7cb28ffac996c59e5ba69debbbe03f9047ca62e4b4197dd6903ca659d730.png" title=" SoapUser clicks on click on button login" width="0"/>
+                <img src="05fc0f27064896dd4f90456f590b094087b3ba4a125d15107ffe40b0ab2f5906.png" title=" SoapUser clicks on click on button login (completed)" width="0"/>
+                <img src="05fc0f27064896dd4f90456f590b094087b3ba4a125d15107ffe40b0ab2f5906.png" title=" Soapuser login task (completed)" width="0"/>
+                <img src="05fc0f27064896dd4f90456f590b094087b3ba4a125d15107ffe40b0ab2f5906.png" title=" When the user enters valid credentials
+| username | password |
+| test00004 | TD3vD$9*dYN* | (completed)" width="0"/>
+                <img src="05fc0f27064896dd4f90456f590b094087b3ba4a125d15107ffe40b0ab2f5906.png" title=" Then I should see the NIP &quot;998877&quot; and the cellphone &quot;3800003070&quot; displayed" width="0"/>
+                <img src="6d845451b7f594d0faa9afeeb16700f06c3a549a6d49cae054ec7ba4ce0039fc.png" title=" Soapuser solicitudes task" width="0"/>
+                <img src="119f99bcf18bd0502c39426896e41f57db96c70f150fe969dd1bdc4712699763.png" title=" SoapUser clicks on click on button NIP" width="0"/>
+                <img src="21717ca109b83b1199dd8807a9e4d68d466c92b1005ba206024b712ded5ddbba.png" title=" SoapUser clicks on click on button NIP" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" SoapUser clicks on click on button NIP (completed)" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" Soapuser solicitudes task (completed)" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" Then I should see the NIP &quot;998877&quot; and the cellphone &quot;3800003070&quot; displayed (completed)" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" And I log out" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" Soapuser logout task" width="0"/>
+                <img src="a8638a0dea8bd0343301f39ddcf346d318bc8444f55f6687d421ad948cd6e3cb.png" title=" SoapUser clicks on click in the button logout" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" SoapUser clicks on click in the button logout (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Soapuser logout task (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" And I log out (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" When I send a portability request using the service &quot;spn_alim_requestPortability&quot; with cellphone &quot;3800003070&quot;, NIP &quot;998877&quot;, and date &quot;2025-07-16T00:07:00&quot;" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Soapuser spn alim request portability task" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Then I should receive the response code &quot;success&quot;" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Then The SOAP error code should be 'success'" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Given I am on the Numlex login page" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" SoapUser opens the browser at https://10.187.66.114/login" width="0"/>
+                <img src="8560d44c07e79cde8c48748d215ec8f6bb2f0b7ede7c15aad2972509cb7a9d9a.png" title=" SoapUser opens the browser at https://10.187.66.114/login (completed)" width="0"/>
+                <img src="8560d44c07e79cde8c48748d215ec8f6bb2f0b7ede7c15aad2972509cb7a9d9a.png" title=" Given I am on the Numlex login page (completed)" width="0"/>
+                <img src="8560d44c07e79cde8c48748d215ec8f6bb2f0b7ede7c15aad2972509cb7a9d9a.png" title=" When the user enters valid credentials for fake user
+| username | password |
+| fakeUser | TD3vD$9*dYN* |" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Soapuser login fake user task" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" SoapUser enters 'fake00033' into text input username" width="0"/>
+                <img src="869f74161f6344f6aa615f7f4836a7b58e6733cad477f5cf93ddf22c30d40d56.png" title=" SoapUser enters 'fake00033' into text input username" width="0"/>
+                <img src="fd191bd4011dc5296970c662c0e7f453da82d8fa37411487694a77410973fad1.png" title=" SoapUser enters 'fake00033' into text input username (completed)" width="0"/>
+                <img src="fd191bd4011dc5296970c662c0e7f453da82d8fa37411487694a77410973fad1.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password" width="0"/>
+                <img src="9b3d31c12e9f60ddfba9ebd1a32e001b2740103d1bbaba4af987f698edd70903.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password" width="0"/>
+                <img src="db48521a5b5f3d3b87fbbd8af6c410c75a645fdbe1b7fc117c13fe9a0c1f6d45.png" title=" SoapUser enters 'TD3vD$9*dYN*' into text input password (completed)" width="0"/>
+                <img src="db48521a5b5f3d3b87fbbd8af6c410c75a645fdbe1b7fc117c13fe9a0c1f6d45.png" title=" SoapUser clicks on click on button login" width="0"/>
+                <img src="81d21d38820a7e8997cf5abfc98f4e7290e441b2e88eac8f38c717d36fdf0189.png" title=" SoapUser clicks on click on button login" width="0"/>
+                <img src="4041bdeb8c97c7bb67ea10586535a6c3c1e8803c98cebff66dab1f99e501a354.png" title=" SoapUser clicks on click on button login (completed)" width="0"/>
+                <img src="4041bdeb8c97c7bb67ea10586535a6c3c1e8803c98cebff66dab1f99e501a354.png" title=" Soapuser login fake user task (completed)" width="0"/>
+                <img src="3f76f701948a0ad93b623a9ace091d520423cb77b7725830375ea1da5bd3aa97.png" title=" When the user enters valid credentials for fake user
+| username | password |
+| fakeUser | TD3vD$9*dYN* | (completed)" width="0"/>
+                <img src="3f76f701948a0ad93b623a9ace091d520423cb77b7725830375ea1da5bd3aa97.png" title=" Then I accept the portability request" width="0"/>
+                <img src="3f76f701948a0ad93b623a9ace091d520423cb77b7725830375ea1da5bd3aa97.png" title=" And I log out" width="0"/>
+                <img src="3f76f701948a0ad93b623a9ace091d520423cb77b7725830375ea1da5bd3aa97.png" title=" Soapuser logout task" width="0"/>
+                <img src="3f76f701948a0ad93b623a9ace091d520423cb77b7725830375ea1da5bd3aa97.png" title=" SoapUser clicks on click in the button logout" width="0"/>
+                <img src="216c6cd863f481935d27a4db9595e8e5cf2487d8141389a06f9472319aa42a17.png" title=" SoapUser clicks on click in the button logout" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" SoapUser clicks on click in the button logout (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Soapuser logout task (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" And I log out (completed)" width="0"/>
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" Given I am on the SPM login page" width="0"/>
+
+                <img src="d66c707123cae23e94ec474c0bdc3f15c6452c09e6ae024e788f80846ce3f219.png" title=" When I log in with username "spm" and password "12345": <span class='pending-color'>PENDING</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
